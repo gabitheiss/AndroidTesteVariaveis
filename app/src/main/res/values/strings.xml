@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Primeiro App Android</string>
     <string name="text_padrao_login">Login</string>
+    <string name="name_label">Name</string>
+    <string name="e_mail_label">E-mail</string>
+    <string name="password_label">Password</string>
 </resources>

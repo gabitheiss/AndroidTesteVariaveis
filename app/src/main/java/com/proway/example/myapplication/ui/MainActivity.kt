@@ -2,22 +2,53 @@ package com.proway.example.myapplication.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
+import android.widget.EditText
+import com.google.android.material.snackbar.Snackbar
 import com.proway.example.myapplication.R
-import com.proway.example.myapplication.classes.Cachorro
-import com.proway.example.myapplication.classes.Cobra
-import com.proway.example.myapplication.classes.Login
-import com.proway.example.myapplication.classes.Veiculo
+import com.proway.example.myapplication.classes.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val cachorro = Cachorro()
-        cachorro.movimentar()
+        findViewById<Button>(R.id.buttonSave).apply {
+            setOnClickListener {
+                checkFields(it)
+            }
+        }
+    }
+        private fun checkFields(view: View) {
+            var form = Formulario()
 
-        val cobra = Cobra()
-        cobra.movimentar()
+            findViewById<EditText>(R.id.editText).apply {
+                form.name = text.toString()
+
+            }
+            findViewById<EditText>(R.id.editText2).apply {
+                form.email = text.toString()
+            }
+            findViewById<EditText>(R.id.editText3).apply {
+                form.password = text.toString()
+            }
+
+            Snackbar.make(
+                view,
+                "${form.name} - ${form.email} - ${form.password}",
+                Snackbar.LENGTH_LONG
+            )
+
+        }
+
+
+
+        //val cachorro = Cachorro()
+        //cachorro.movimentar()
+
+        //val cobra = Cobra()
+        //cobra.movimentar()
 
 
 
@@ -46,4 +77,3 @@ class MainActivity : AppCompatActivity() {
 //            val retornoDaFuncao3 = terceiroVeiculo.verificarMotor()
 
     }
-}
