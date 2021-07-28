@@ -5,4 +5,5 @@
     <string name="e_mail_label">E-mail</string>
     <string name="password_label">Password</string>
     <string name="message_error">Verifique todos os campos</string>
+    <string name="bem_vindo_ao_nosso_app">Bem vindo ao nosso app</string>
 </resources>

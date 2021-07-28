@@ -1,5 +1,6 @@
 package com.proway.example.myapplication.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -35,9 +36,13 @@ class MainActivity : AppCompatActivity() {
             }
 
             if (form.chekAllFields()){
-                Snackbar.make(
-                    view, "${form.name} - ${form.email} - ${form.password}", Snackbar.LENGTH_LONG
-                ).show()
+                val intent = Intent(this, ApplicationActivity::class.java)
+                startActivity(intent)
+
+
+//                Snackbar.make(
+//                    view, "${form.name} - ${form.email} - ${form.password}", Snackbar.LENGTH_LONG
+//                ).show()
             }else{
                 Snackbar.make(view, getString(R.string.message_error),Snackbar.LENGTH_LONG).show()
             }
