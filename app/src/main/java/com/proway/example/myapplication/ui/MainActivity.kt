@@ -3,6 +3,8 @@ package com.proway.example.myapplication.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.proway.example.myapplication.R
+import com.proway.example.myapplication.classes.Cachorro
+import com.proway.example.myapplication.classes.Cobra
 import com.proway.example.myapplication.classes.Login
 import com.proway.example.myapplication.classes.Veiculo
 
@@ -11,18 +13,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val cachorro = Cachorro()
+        cachorro.movimentar()
 
-        var login = Login(null,null)
-        login.email = "t_gaaby@hotmail.com"
-        login.senha = "123"
+        val cobra = Cobra()
+        cobra.movimentar()
 
-        if(login.email != null){
-            println(login.email!!.length)
 
-        }
-        login.senha?.apply {
-            println(this)
-        }
+
+//        var login = Login(null,null)
+//        login.email = "t_gaaby@hotmail.com"
+//        login.senha = "123"
+//
+//        if(login.email != null){
+//            println(login.email!!.length)
+//
+//        }
+//        login.senha?.apply {
+//            println(this)
+//        }
 
 
 
