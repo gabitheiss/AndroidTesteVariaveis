@@ -34,11 +34,15 @@ class MainActivity : AppCompatActivity() {
                 form.password = text.toString()
             }
 
-            Snackbar.make(
-                view,
-                "${form.name} - ${form.email} - ${form.password}",
-                Snackbar.LENGTH_LONG
-            )
+            if (form.chekAllFields()){
+                Snackbar.make(
+                    view, "${form.name} - ${form.email} - ${form.password}", Snackbar.LENGTH_LONG
+                ).show()
+            }else{
+                Snackbar.make(view, getString(R.string.message_error),Snackbar.LENGTH_LONG).show()
+            }
+
+
 
         }
 
