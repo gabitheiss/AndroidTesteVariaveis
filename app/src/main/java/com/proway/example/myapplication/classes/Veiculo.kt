@@ -3,7 +3,7 @@ package com.proway.example.myapplication.classes
 class Veiculo(
      var motor: String,
      var combustivel: String,
-) {
+): Som, Movimentacao {
 
     constructor(): this("","")
     constructor(motor: String) : this(motor, "")
@@ -14,5 +14,21 @@ class Veiculo(
     }
      fun verificarCombustivel(){
         println(combustivel)
+    }
+
+    override fun ruido(): String {
+        return ""
+    }
+
+    override fun frente(): String {
+        return ""
+    }
+
+    override fun lado() {
+
+    }
+
+    override fun randon() {
+
     }
 }

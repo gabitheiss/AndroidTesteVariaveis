@@ -6,4 +6,20 @@ class Cobra : Animal ("réptil"){
         println("Cobra rasteja")
         super.movimentar()
     }
+
+    override fun ruido(): String {
+        return "shshshs..."
+    }
+
+    override fun frente(): String {
+        return  ""
+    }
+
+    override fun lado() {
+
+    }
+
+    override fun randon() {
+
+    }
 }
