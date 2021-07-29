@@ -11,45 +11,46 @@ import com.proway.example.myapplication.R
 import com.proway.example.myapplication.classes.*
 
 class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.activity_main)
+//
+//        findViewById<Button>(R.id.buttonSave).apply {
+//            setOnClickListener {
+//                checkFields(it)
+//
+//            }
+//        }
+//    }
+//        private fun checkFields(view: View) {
+//            var form = Formulario()
+//
+//            findViewById<EditText>(R.id.editText).apply {
+//                form.name = text.toString()
 
-        findViewById<Button>(R.id.buttonSave).apply {
-            setOnClickListener {
-                checkFields(it)
-            }
-        }
-    }
-        private fun checkFields(view: View) {
-            var form = Formulario()
-
-            findViewById<EditText>(R.id.editText).apply {
-                form.name = text.toString()
-
-            }
-            findViewById<EditText>(R.id.editText2).apply {
-                form.email = text.toString()
-            }
-            findViewById<EditText>(R.id.editText3).apply {
-                form.password = text.toString()
-            }
-
-            if (form.chekAllFields()){
-                val intent = Intent(this, ApplicationActivity::class.java)
-                startActivity(intent)
-
-
-//                Snackbar.make(
-//                    view, "${form.name} - ${form.email} - ${form.password}", Snackbar.LENGTH_LONG
-//                ).show()
-            }else{
-                Snackbar.make(view, getString(R.string.message_error),Snackbar.LENGTH_LONG).show()
-            }
-
-
-
-        }
+//            }
+//            findViewById<EditText>(R.id.editText2).apply {
+//                form.email = text.toString()
+//            }
+//            findViewById<EditText>(R.id.editText3).apply {
+//                form.password = text.toString()
+//            }
+//
+//            if (form.chekAllFields()){
+//                val intent = Intent(this, ApplicationActivity::class.java)
+//                startActivity(intent)
+//
+//
+////                Snackbar.make(
+////                    view, "${form.name} - ${form.email} - ${form.password}", Snackbar.LENGTH_LONG
+////                ).show()
+//            }else{
+//                Snackbar.make(view, getString(R.string.message_error),Snackbar.LENGTH_LONG).show()
+//            }
+//
+//
+//
+//        }
 
 
 

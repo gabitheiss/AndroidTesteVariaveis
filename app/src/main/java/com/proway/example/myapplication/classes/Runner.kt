@@ -7,6 +7,14 @@ fun main(){
     val veiculo = Veiculo()
 
     val altoFalante = AltoFalante()
+
+    altoFalante.reproduzirSom(object : Som{
+        override fun ruido(): String{
+            return "Som aleatorio"
+        }
+    })
+
+
     altoFalante.reproduzirSom(cachorro)
     altoFalante.reproduzirSom(cobra)
     altoFalante.reproduzirSom(veiculo)
