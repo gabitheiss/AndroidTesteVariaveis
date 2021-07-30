@@ -5,7 +5,7 @@ package com.proway.example.myapplication.classes
 enum class TipoVeiculo(val id: Int, val key: String) {
 
 
-    CARRO (1, "key carro"),
-    MOTO (2, "key moto"),
-    CAMINHÃO (3, "key caminhão");
+    CARRO(1, "key carro"),
+    MOTO(2, "key moto"),
+    CAMINHÃO(3, "key caminhão");
 }

@@ -3,10 +3,13 @@ package com.proway.example.myapplication.classes
 class Veiculo(
      var motor: String,
      var combustivel: String,
-): Som, Movimentacao {
+     var tipoVeiculo: TipoVeiculo?
 
-    constructor(): this("","")
-    constructor(motor: String) : this(motor, "")
+): Som, Movimentacao {
+    constructor(): this("", "",null)
+    constructor(motor: String) : this(motor, "",null)
+
+
 
      fun verificarMotor() : Boolean {
         return motor.isNotEmpty() && motor.length >=2
