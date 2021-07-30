@@ -2,6 +2,7 @@ package com.proway.example.myapplication.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.proway.example.myapplication.R
@@ -24,7 +25,8 @@ class PrimeiraListaActivity : AppCompatActivity() {
         recyclerViewNomes.adapter = AdapterListaNomes(arrayNomes)
 
         //linha importante, não esquecer de adicionar
-        recyclerViewNomes.layoutManager = LinearLayoutManager(this)
+        //spanCount, quantidade de linhas na horizontal >>
+        recyclerViewNomes.layoutManager = GridLayoutManager(this, 2)
 
 
     }
