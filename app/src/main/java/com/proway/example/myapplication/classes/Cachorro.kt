@@ -1,6 +1,6 @@
 package com.proway.example.myapplication.classes
 
-class Cachorro() : Animal("mamífero") {
+class Cachorro(val nome: String) : Animal("mamífero") {
 
     override  fun movimentar(){
         println("Cachorro caminha com 4 patas")

@@ -1,6 +1,6 @@
 package com.proway.example.myapplication.classes
 
-class Cobra : Animal ("réptil"){
+class Cobra(val veneno: Boolean) : Animal ("réptil"), Som{
 
     override  fun movimentar(){
         println("Cobra rasteja")

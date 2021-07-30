@@ -7,9 +7,9 @@ package com.proway.example.myapplication.classes
 
 fun main() {
  val arrayDeAnimais = arrayListOf<Animal?>()
-    arrayDeAnimais.add(Cachorro())
-    arrayDeAnimais.add(Cobra())
-    arrayDeAnimais.add(Cobra())
+    arrayDeAnimais.add(Cachorro("Bud"))
+    arrayDeAnimais.add(Cobra(true))
+    arrayDeAnimais.add(Cobra(false))
     arrayDeAnimais.add(null)
 
     arrayDeAnimais.size // 4 posições
@@ -17,13 +17,12 @@ fun main() {
     arrayDeAnimais.forEach { animal ->
 
         animal?.apply {
-            var ruido:String = ""
             if (this is Cobra){
-                ruido = (this as Cobra).ruido()
+                println("Cobra com veneno? $veneno")
             }else if (this is Cachorro){
-                ruido = (this as Cachorro).ruido()
+              println("Nome do cachorro é $nome")
             }
-            println(ruido)
+
         }
 
 
