@@ -1,12 +1,7 @@
 package com.proway.example.myapplication.classes
 
-
-
-
-
-
 fun main() {
- val arrayDeAnimais = arrayListOf<Animal?>()
+    val arrayDeAnimais = arrayListOf<Animal?>()
     arrayDeAnimais.add(Cachorro("Bud"))
     arrayDeAnimais.add(Cobra(true))
     arrayDeAnimais.add(Cobra(false))
@@ -17,19 +12,44 @@ fun main() {
     arrayDeAnimais.forEach { animal ->
 
         animal?.apply {
-            if (this is Cobra){
+            if (this is Cobra) {
                 println("Cobra com veneno? $veneno")
-            }else if (this is Cachorro){
-              println("Nome do cachorro é $nome")
+            } else if (this is Cachorro) {
+                println("Nome do cachorro é $nome")
             }
-
         }
+    }
 
-
+    val arrayDeNumeros = arrayOf(5, 2, 10, 20, 17, 13, 25)
+    arrayDeNumeros.forEach {
+        println(it)
     }
 
 
+// condição para filtrar maiores de 10 e organizar na ordem crescente com sortede()
 
+    arrayDeNumeros.filter { it > 10 }.sorted().forEach() {
+        println(it)
+    }
+
+    val arrayString = arrayOf(
+        "Gabriela",
+        "Gabriel",
+        "Matheus",
+        "Andrei",
+        "Vinicius",
+        "Tati",
+        "Edson",
+        "Danilo",
+        "Giovanni",
+        "Felipe"
+    )
+    //retornar array já ordenado -- forEach() serve para percorrer todos os itens do arrray
+
+    val arrayOrdenado = arrayString.sorted()
+    arrayOrdenado.forEach() {
+        println(it)
+    }
 
 
 //    val a = ArrayList<Animal>()
@@ -92,8 +112,9 @@ fun printTipoVeiculo(tipo: TipoVeiculo) {
         TipoVeiculo.MOTO -> println("Selecionado ${TipoVeiculo.MOTO.id} -- ${TipoVeiculo.MOTO.key}")
     }
 }
-fun printPessoa(tipo: Pessoa){
-    when (tipo){
+
+fun printPessoa(tipo: Pessoa) {
+    when (tipo) {
         Pessoa.ALUNO -> println("O ${tipo} está estudando")
         Pessoa.PROFESSOR -> println("O ${tipo} está dando aula")
         Pessoa.ADM -> println("O ${tipo} está administrando")
