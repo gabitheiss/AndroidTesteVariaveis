@@ -1,6 +1,52 @@
 package com.proway.example.myapplication.classes
 
+
+
+
+
+
 fun main() {
+ val arrayDeAnimais = arrayListOf<Animal?>()
+    arrayDeAnimais.add(Cachorro())
+    arrayDeAnimais.add(Cobra())
+    arrayDeAnimais.add(Cobra())
+    arrayDeAnimais.add(null)
+
+    arrayDeAnimais.size // 4 posições
+
+    arrayDeAnimais.forEach { animal ->
+
+        animal?.apply {
+            var ruido:String = ""
+            if (this is Cobra){
+                ruido = (this as Cobra).ruido()
+            }else if (this is Cachorro){
+                ruido = (this as Cachorro).ruido()
+            }
+            println(ruido)
+        }
+
+
+    }
+
+
+
+
+
+//    val a = ArrayList<Animal>()
+//        a.add(Cachorro())
+//        a.add(Cobra())
+//        a.add(Cobra())
+//        a.add(Cobra())
+//
+//    a.size
+//    a[3]
+//
+//
+//    val arrayString = emptyArray<String>()
+//
+//    val arrayDeNumeros = arrayOf(10, 30, 20, 3, 5)
+
 
     val num = 9
     val retorno =
