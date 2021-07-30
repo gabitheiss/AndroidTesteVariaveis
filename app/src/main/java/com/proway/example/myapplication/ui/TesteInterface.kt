@@ -25,6 +25,7 @@ class TesteInterface : AppCompatActivity(), View.OnClickListener {
                 R.id.buttonSave -> {
                     Snackbar.make(it, getString(R.string.botao_login), Snackbar.LENGTH_LONG).show()
                 }
+                //exemplo de string sem chamar as strings
                 R.id.buttonTest -> {
                     Snackbar.make(it, "Test", Snackbar.LENGTH_LONG).show()
                 }
