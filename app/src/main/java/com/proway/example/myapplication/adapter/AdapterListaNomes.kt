@@ -7,7 +7,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.proway.example.myapplication.R
 
-class AdapterListaNomes(val arrayDeNomes: ArrayList<String>): RecyclerView.Adapter<ViewHolderNomes>() {
+class AdapterListaNomes(
+    val arrayDeNomes: ArrayList<String>,
+    val onClick: (String, Int) -> Unit
+    ):
+    RecyclerView.Adapter<ViewHolderNomes>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderNomes {
 
@@ -18,6 +22,9 @@ class AdapterListaNomes(val arrayDeNomes: ArrayList<String>): RecyclerView.Adapt
 
     override fun onBindViewHolder(holder: ViewHolderNomes, position: Int) {
         holder.textViewNome.text = arrayDeNomes[position]
+        holder.itemView.setOnClickListener {
+            onClick(arrayDeNomes[position], position)
+        }
     }
 
     override fun getItemCount(): Int {

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.proway.example.myapplication.R
 import com.proway.example.myapplication.adapter.AdapterListaNomes
+import com.google.android.material.snackbar.Snackbar
 
 class PrimeiraListaActivity : AppCompatActivity() {
 
@@ -22,11 +23,15 @@ class PrimeiraListaActivity : AppCompatActivity() {
 
 
         recyclerViewNomes = findViewById(R.id.recyclerViewNomes)
-        recyclerViewNomes.adapter = AdapterListaNomes(arrayNomes)
+        recyclerViewNomes.adapter = AdapterListaNomes(arrayNomes){ nome, position ->
+            Snackbar.make(recyclerViewNomes, "Item clickado é $nome posiçao: $position", Snackbar.LENGTH_LONG)
+                .show()
+        }
 
         //linha importante, não esquecer de adicionar
         //spanCount, quantidade de linhas na horizontal >>
-        recyclerViewNomes.layoutManager = GridLayoutManager(this, 2)
+        recyclerViewNomes.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+
 
 
     }
